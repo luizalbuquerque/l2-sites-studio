@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  mysql_shared:
+    image: mysql:5.7
+    container_name: mysql_shared_website
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: shared_db_site
+      MYSQL_USER: site_db
+      MYSQL_PASSWORD: jeKQaELtxJ7yN._
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - "3306:3306"
